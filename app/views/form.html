@@ -1,0 +1,14 @@
+
+  
+
+  <form novalidate class="simple-form">
+    Question 1: <input type="text" ng-model="form.q1" /><br />
+    Question 2: <input type="text" ng-model="form.q2" /><br />
+    Question 3: <input type="radio" ng-model="form.q3" value="designer" />Designer
+    <input type="radio" ng-model="form.q3" value="printer" />Printer<br />
+    <input type="button" ng-click="reset()" value="Reset" />
+    <input type="submit" ng-click="update(form)" value="Save" />
+  </form>
+  <pre>form = {{form | json}}</pre>
+  <pre>master = {{master | json}}</pre>
+
