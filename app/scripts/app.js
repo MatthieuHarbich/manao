@@ -19,11 +19,16 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      // .when('/about', {
-      //   templateUrl: 'views/about.html',
-      //   controller: 'AboutCtrl',
-      //   controllerAs: 'about'
-      // })
+      .when('/designer', {
+        templateUrl: 'views/designer.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
+      .when('/particulier', {
+        templateUrl: 'views/particulier.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
       .when('/form', {
         templateUrl: 'views/form.html',
         controller: 'FormCtrl',

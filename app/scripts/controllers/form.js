@@ -10,7 +10,7 @@
 
 
  angular.module('manaoApp')
- .controller('FormCtrl', function ($scope) {
+ .controller('FormCtrl', function ($scope, $location) {
 
 
  	//** socket **//
@@ -33,8 +33,13 @@
 
  	$scope.reset();
 
-
-
+ 	$scope.go = function(path){
+ 		console.log(path);
+ 		$location.path(path);
+ 	};
+ 	$scope.console = function(form){
+ 		console.log(form);
+ 	};
 
  });
 
