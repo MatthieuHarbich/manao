@@ -17,7 +17,8 @@ module.exports = function (grunt) {
    express: 'grunt-express-server',
    useminPrepare: 'grunt-usemin',
    ngtemplates: 'grunt-angular-templates',
-   cdnify: 'grunt-google-cdn'
+   cdnify: 'grunt-google-cdn',
+   less:'grunt-contrib-less'
  });
 
   // Configurable paths for the application
@@ -51,10 +52,23 @@ module.exports = function (grunt) {
         script: './server.js'
       }
     }
-  },
+  },less: {
+  dev: {
+    options: {
+      paths: ['assets/css']
+    },
+    files: {
+      'app/styles/main.css': 'app/styles/main.less'
+    }
+  }
+},
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
+
+            files: "app/styles/main.less*",
+            tasks: ["less"],
+    
       bower: {
         files: ['bower.json'],
         tasks: ['wiredep']
@@ -455,6 +469,7 @@ grunt.registerTask('serve', 'Compile then start a connect web server', function 
   }
 
   grunt.task.run([
+    'less:dev',
     'express:dev',
     'clean:server',
     'wiredep',
