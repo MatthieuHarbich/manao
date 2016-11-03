@@ -36,6 +36,7 @@ var server = app.listen(port);
 
 app.use(express.static(__dirname + '/app'));
 console.log("Listening on " + port)
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 
 // Expose app
