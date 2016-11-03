@@ -470,7 +470,7 @@ grunt.registerTask('serve', 'Compile then start a connect web server', function 
 
   grunt.task.run([
     'less:dev',
-    'express:dev',
+   // 'express:dev', // pour connecter la bd
     'clean:server',
     'wiredep',
     'concurrent:server',
