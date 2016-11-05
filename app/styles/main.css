@@ -119,6 +119,8 @@ body {
   }
   #mainButtons button {
     width: 100% !important;
+    font-size: 1.4em;
+    height: 60px;
   }
   #mainButtons .lire {
     margin-left: 0px;
