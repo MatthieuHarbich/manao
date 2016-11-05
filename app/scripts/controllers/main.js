@@ -82,9 +82,9 @@ angular.module('manaoApp')
       }
 
       $scope.go = function(path){
- 		console.log(path);
- 		$location.path(path);
- 	};
+     		console.log(path);
+     		$location.path(path);
+     	};
 
       $scope.main();
   });
