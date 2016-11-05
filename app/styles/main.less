@@ -137,3 +137,54 @@ body {
     }
   }
 }
+
+
+
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 100px) 
+  and (max-device-width: 736px) 
+  // and (-webkit-min-device-pixel-ratio: 3)
+  // and (orientation: portrait) { 
+{
+    #title{
+      width:65%;
+    }
+    #pitch{
+      font-size: 1.2em;
+    }
+
+    #mainButtons{
+      button{
+        width:100% !important;
+      }
+      .lire{
+        margin-left: 0px;
+        margin-top: 15px;
+      }
+      .video{
+        margin-left: 0px;
+      }
+      
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
