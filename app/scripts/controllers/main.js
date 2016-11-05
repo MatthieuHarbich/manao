@@ -69,6 +69,13 @@ angular.module('manaoApp')
       	$('#mainButtons').addClass('hidden');
       }
 
+      $scope.displayText = function(){
+        $('#description').removeClass('hidden');
+        $('#mainButtons').addClass('hidden');
+        $('#title').addClass('hidden');
+        $('#pitch').addClass('hidden');
+      }
+
       $scope.videoSkip = function(){
       	var vid = $('#video video');
       	vid.currentTime = 7;
