@@ -21,6 +21,10 @@
 
 }
 
+*{
+  overflow:hidden;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -31,6 +35,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     border:20px solid #FF593D;
+    overflow: hidden;
 }
 
 #title{
@@ -145,9 +150,16 @@ body {
   }
 }
 
-
+form{
+  img{
+    width: 70%;
+    margin-left: 15%;
+    border: 4px solid #FF593D;
+  }
+}
 .email{
   width:100%;
+  // margin-left: 25%;
   height: 30px;
   background-color: rgba(255, 255, 255, 0.5);
   border:none;
@@ -157,12 +169,13 @@ body {
 
 .submit{
   margin-top: 5px;
-  background-color: rgba(255, 89, 0, 1);
+  background-color: #FF593D;
   // background-color: rgba(255, 255, 255, 0);
   border: none;
   color:white;
   text-transform: uppercase;
   width: 100%;
+  // margin-left: 25%;
   font-family: 'ralewayregular';
   height: 35px;
 }
@@ -176,8 +189,17 @@ body {
   }
 }
 
+#desginerHead{
+  position: fixed;
+  width: 30%;
+  left: 0px;
+}
 .designerContainer{
   margin-top: 50px;
+  width:50%;
+  margin-left: 25%;
+    overflow: hidden;
+
 }
 
 #description{
