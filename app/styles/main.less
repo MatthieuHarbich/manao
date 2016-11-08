@@ -232,8 +232,8 @@ form{
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 100px) 
-  and (max-device-width: 736px) 
+  and (min-device-width: 14px) 
+  and (max-device-width: 1000px) 
   // and (-webkit-min-device-pixel-ratio: 3)
   // and (orientation: portrait) { 
 {   
@@ -249,6 +249,15 @@ form{
     border:10px solid #FF593D;
 }
     
+    #designerHead{
+      img{
+        display:none;
+      }
+    }
+
+    .designerContainer{
+      width:100%;
+    }
     #buttons{
       button{
         width: 100%;
