@@ -20,12 +20,15 @@ angular.module('manaoApp')
           var titleHeight = $('.header').height();
           var marginTop = (height/2) - (titleHeight/2) - 50;
           $('.title').css({"marginTop":marginTop});
+
+
           setTimeout(function(){
             $('#pitch').removeClass('hidden');
             $('#pitch').animate({
-              marginTop:"10px"
+              opacity:1
             },500)
-          },2200);
+          },800);
+
           setTimeout(function(){
             $('#pitch').animate({
               opacity:0
@@ -35,7 +38,18 @@ angular.module('manaoApp')
               width:"70%",
               marginLeft:"15%"
             },500)
+
+
           },3000);
+
+          setTimeout(function(){
+            $('#description').removeClass('hidden');
+             $('#description').animate({
+                opacity:1
+              },500)
+          },3500);
+
+
         	$scope.resize();
 
         	$(window).on('resize',function(){
