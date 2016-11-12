@@ -38,6 +38,7 @@ body {
   overflow-y: hidden;
 }
 #title {
+  z-index: 3000;
   text-align: center;
   /*margin-bottom: 20px;*/
   font-size: 5em;
@@ -223,6 +224,14 @@ form img {
   }
   #designerHead img {
     display: none;
+  }
+  .designerButton {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .particulierButton {
+    width: 80%;
+    margin-left: 10%;
   }
   .designerContainer {
     width: 100%;
