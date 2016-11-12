@@ -220,7 +220,6 @@ form img {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: 10px solid #FF593D;
   }
   #designerHead img {
     display: none;
@@ -244,10 +243,10 @@ form img {
     color: white;
   }
   #title {
-    width: 65%;
+    width: 40%;
   }
   #pitch {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   #mainButtons button {
     width: 100% !important;
