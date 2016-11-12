@@ -35,12 +35,13 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-y: hidden;
 }
 #title {
   text-align: center;
   /*margin-bottom: 20px;*/
   font-size: 5em;
-  width: 35%;
+  width: 25%;
   font-family: 'pacifico';
 }
 .title {
@@ -51,7 +52,7 @@ body {
 #pitch {
   text-align: center;
   font-size: 2.3em;
-  margin-top: 10px;
+  margin-top: 50%;
   font-family: 'ralewayregular';
 }
 #video {
@@ -64,11 +65,16 @@ body {
 }
 .hiddem {
   display: none;
+  opacity: 0;
 }
 #mainButtons {
   position: relative;
   top: 30px;
   padding-top: 3px;
+  margin-top: 5%;
+}
+#mainButtons a {
+  font-family: 'ralewayregular';
 }
 #mainButtons button {
   background-color: rgba(255, 255, 255, 0.5);
@@ -88,7 +94,7 @@ body {
   width: 35%;
   margin-left: 10%;
 }
-#buttons button {
+.buttons button {
   height: 50px;
   font-family: 'ralewayregular';
   font-weight: bold;
@@ -97,9 +103,17 @@ body {
   text-transform: uppercase;
   border: 2px solid black;
 }
-#buttons button:hover {
+.buttons button:hover {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
+}
+.buttons .designerButton {
+  width: 35%;
+  margin-left: 10%;
+}
+.buttons .particulierButton {
+  width: 35%;
+  margin-left: 10%;
 }
 #controls {
   position: fixed;
@@ -169,6 +183,15 @@ form img {
   margin-left: 25%;
   overflow: hidden;
   padding-bottom: 50px;
+}
+#description .whiteFilter {
+  z-index: -1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  width: 100%;
 }
 #description h1 {
   text-align: center;

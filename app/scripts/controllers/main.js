@@ -16,7 +16,26 @@ angular.module('manaoApp')
     ];
     $scope.main = function () {
         $(document).ready(function () {
-        	
+        	var height = $(window).height();
+          var titleHeight = $('.header').height();
+          var marginTop = (height/2) - (titleHeight/2) - 50;
+          $('.title').css({"marginTop":marginTop});
+          setTimeout(function(){
+            $('#pitch').removeClass('hidden');
+            $('#pitch').animate({
+              marginTop:"10px"
+            },500)
+          },2200);
+          setTimeout(function(){
+            $('#pitch').animate({
+              opacity:0
+            },500)
+            $('.header').animate({
+              marginTop:-marginTop+40,
+              width:"70%",
+              marginLeft:"15%"
+            },500)
+          },3000);
         	$scope.resize();
 
         	$(window).on('resize',function(){
@@ -77,8 +96,9 @@ angular.module('manaoApp')
       }
 
       $scope.videoSkip = function(){
+
       	var vid = $('#video video');
-      	vid.currentTime = 7;
+      	vid.setCurrentTime = 7;
       }
 
       $scope.resize = function(){

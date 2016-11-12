@@ -51,15 +51,19 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+    overflow-y: hidden;    
     // overflow: hidden;
+}
+
+.header{
+  
 }
 
 #title{
   text-align: center; 
   /*margin-bottom: 20px;*/
   font-size: 5em;
-  width: 35%;
+  width: 25%;
   font-family: 'pacifico';
 }
 
@@ -67,12 +71,13 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
+  // margin-top: 25%;
 }
 
 #pitch{
   text-align: center;
   font-size: 2.3em;
-  margin-top: 10px;
+  margin-top: 50%;
   font-family: 'ralewayregular';
 }
 
@@ -88,12 +93,17 @@ body {
 
 .hiddem{
   display: none;
+  opacity: 0;
 }
 
 #mainButtons{
   position: relative;
   top: 30px;
   padding-top: 3px;
+  margin-top: 5%;
+  a{
+    font-family: 'ralewayregular';
+  }
   button{
     background-color: rgba(255, 255, 255, 0.5);
     font-family: 'ralewayregular';
@@ -115,7 +125,7 @@ body {
   }
 }
 
-#buttons{
+.buttons{
   button{
     height: 50px;
     font-family: 'ralewayregular';
@@ -129,6 +139,16 @@ body {
       color:white;
 
     }
+  }
+
+  .designerButton{
+    width: 35%;
+    margin-left: 10%;
+  }
+
+  .particulierButton{
+     width:35%;
+    margin-left: 10%;
   }
 }
 
@@ -220,6 +240,15 @@ form{
 }
 
 #description{
+  .whiteFilter{
+    z-index:-1000;
+    position: fixed;
+    left: 0;
+    top:0;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 100%;
+    width: 100%;
+  }
   h1{
     text-align: center;
 
