@@ -1,15 +1,18 @@
 
   <div class="container">
     <div id="home" class="row ">
-      <div class="twelve columns" style="margin-top: 25%">
+      <div class="twelve columns" >
         <!-- <h1 id="title">Manao</h1> -->
-        <div class="title">
+        <div class="header">
+           <div class="title">
           <img id="title" src="images/logo.gif"/>
         </div>
         
-        <h4 id="pitch" tkey="pitch">Imprime tes idées!</h4>
+        <h4 id="pitch" class="hidden">imprime tes idées!</h4>
+        </div>
+       
 
-        <div id="video" class="hidden">
+        <!-- <div id="video" class="hidden">
           <video >
             <source src="images/test3.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
@@ -24,31 +27,35 @@
             <button ng-click="videoSkip()" class=" btn btn-default skip"><img src="images/controls/skip.png" alt=""></button>
 
           </div>
-        </div>
+        </div> -->
 
-        <div id="description" class="hidden">
-            <h1>Manao</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nulla. Libero rerum, delectus necessitatibus labore esse ea nemo quae veritatis praesentium, quod quis sunt! Quis, dolores doloribus iste nihil doloremque?</p>
+        <div id="description" class="hidden col-md-8 col-md-offset-2">
+          <div class="whiteFilter "></div>
+            <p><strong>manao</strong> est une plateforme web mettant en lien des personnes capable de modéliser en 3D, et des particulier.</p>
+            <p>Thierry est architecte, et de ce fait sait rendre des objets en 3D </p>
 
             <img src="lorem" alt="">
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora at quisquam numquam ut ex placeat eveniet. Earum error, asperiores hic quo facilis veniam ipsum, obcaecati beatae! Accusantium itaque ullam iste!</p>
             <div class="descriptionButtons">
-                <button ng-click="go('/designer')" class="btn btn-default col-md-3">Je suis designer</button>
-            <button ng-click="go('/particulier')" class="btn btn-default col-md-3">Je suis particulier</button>
+                <div class="buttons lireButtons">
+                  <button ng-click="go('/designer')" class=" designerButton btn btn-default col-md-3 ">Je suis designer</button>
+                  <button ng-click="go('/particulier')" class="particulierButton btn btn-default col-md-3">Je suis particulier</button>
+                </div>
             </div>
         </div>
 
-        <div id="mainButtons">
-          <button ng-click="launchVideo()" class="video btn btn-default ">Voir la vidéo</button>
+       <!--  <div id="mainButtons"> -->
+          <!-- <button ng-click="launchVideo()" class="video btn btn-default disabled ">Voir la vidéo</button> -->
+        <!--   <a href="#" class="video btn btn-default disabled" role="button" style="color:grey;">Voir la vidéo (à venir)</a>
           <button ng-click="displayText()" class="lire btn btn-default ">Lire le descriptif</button>
         </div>
 
-        <div id="buttons" class="hidden">
-          <button ng-click="go('/designer')" class="btn btn-default col-md-3">Je suis designer</button>
-          <button ng-click="go('/particulier')" class="btn btn-default col-md-3">Je suis particulier</button>
+        <div class="buttons videoButtons hidden">
+          <button ng-click="go('/designer')" class=" designerButton btn btn-default col-md-3">Je suis designer</button>
+          <button ng-click="go('/particulier')" class="particulierButton btn btn-default col-md-3">Je suis particulier</button>
         </div>
-        
+         -->
        
       
       

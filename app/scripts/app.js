@@ -21,18 +21,28 @@ angular
       })
       .when('/designer', {
         templateUrl: 'views/designer.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controller: 'MainCtrl',
+        controllerAs: 'main'
       })
       .when('/particulier', {
         templateUrl: 'views/particulier.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controller: 'MainCtrl',
+        controllerAs: 'main'
       })
       .when('/form', {
         templateUrl: 'views/form.html',
         controller: 'FormCtrl',
         controllerAs: 'form'
+      })
+      .when('/dform', {
+        templateUrl: 'views/dform.html',
+        controller: 'DformCtrl',
+        controllerAs: 'dform'
+      })
+      .when('/pform', {
+        templateUrl: 'views/pform.html',
+        controller: 'DformCtrl',
+        controllerAs: 'dform'
       })
       .otherwise({
         redirectTo: '/form'

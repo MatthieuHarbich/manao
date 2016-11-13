@@ -1,13 +1,20 @@
 
+<!-- <div class="borderBottom"></div> -->
 <div id="desginerHead" class="head md-col-12">
-	<img src="images/logo.gif" alt="">
+	<img src="images/cerf.png" alt="">
 </div>
 
-<div class="designerContainer ">
-	<h4>Tu es intéressé par ce produit?</h4>
-	<form action="">
-		<p>En entrant ton e-mail, profite de 4 mois freemium gratuit!</p>
-		<input class="email" placeholder="jaime@manao-3d.ch" type="email">
-		<input class="submit" type="submit">
+<div class="designerContainer col-md-8 col-md-offset-2">
+<div class="whiteFilter"></div>
+	<form action="" ng-submit="go('/dform')">
+<!-- 		<p>Est-ce que cette plateforme est susceptible de t'intéresser?</p>
+		<img src="images/modele3d.jpg" alt=""> -->
+		<p><span class="bold1">manao</span> t'offre 4 mois d'abonnement <span class="bold2">premium</span> à sa sortie. <br> Laissez-nous votre e-mail pour en bénéficier!</p>
+
+		<p>Votre e-mail <strong>ne sera pas</strong> utilisé à des fins commerciales. Aucun <strong>SPAM</strong> ne vous sera envoyé.</p>
+
+		<input class="email" placeholder="jaime@manao-3d.ch" type="email" required>
+		<input  class="submit" type="submit">
 	</form>
+	<button ng-click="go('/no')"class="noInterest btn btn-secondary  btn-block col-md-12">Je ne suis pas intéressé.</button>
 </div>

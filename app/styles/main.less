@@ -21,23 +21,50 @@
 
 }
 
+*{
+  // overflow:hidden;
+}
+.border{
+  position: fixed;
+  width: 100%;
+  height:100%;
+  border:20px solid #FF593D;
+  left:0;
+  top:0;
+  z-index:-100;
+}
+
+.borderBottom{
+  position: fixed;
+  width: 100%;
+  height: 20px;
+  background-color: #FF593D;
+  bottom: 0;
+  left:0;
+}
 body {
     width: 100%;
     height: 100%;
-    position: fixed;
+    // position: fixed;
     background: url(../images/bg.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border:20px solid #FF593D;
+    overflow-y: hidden;    
+    // overflow: hidden;
+}
+
+.header{
+
 }
 
 #title{
+  z-index: 3000;
   text-align: center; 
   /*margin-bottom: 20px;*/
   font-size: 5em;
-  width: 35%;
+  width: 25%;
   font-family: 'pacifico';
 }
 
@@ -45,9 +72,11 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
+  // margin-top: 25%;
 }
 
 #pitch{
+  opacity: 0;
   text-align: center;
   font-size: 2.3em;
   margin-top: 10px;
@@ -66,12 +95,17 @@ body {
 
 .hiddem{
   display: none;
+  opacity: 0;
 }
 
 #mainButtons{
   position: relative;
   top: 30px;
   padding-top: 3px;
+  margin-top: 5%;
+  a{
+    font-family: 'ralewayregular';
+  }
   button{
     background-color: rgba(255, 255, 255, 0.5);
     font-family: 'ralewayregular';
@@ -93,9 +127,9 @@ body {
   }
 }
 
-#buttons{
+.buttons{
   button{
-    height: 50px;
+    height: 40px;
     font-family: 'ralewayregular';
     font-weight: bold;
     color: black;
@@ -108,8 +142,21 @@ body {
 
     }
   }
+
+  .designerButton{
+    width: 35%;
+    margin-left: 10%;
+  }
+
+  .particulierButton{
+     width:35%;
+    margin-left: 10%;
+  }
 }
 
+strong{
+  font-weight: 800;
+}
 #controls{
   position: fixed;
   bottom:25px;
@@ -145,9 +192,16 @@ body {
   }
 }
 
-
+form{
+  img{
+    width: 70%;
+    margin-left: 15%;
+    border: 4px solid #FF593D;
+  }
+}
 .email{
   width:100%;
+  // margin-left: 25%;
   height: 30px;
   background-color: rgba(255, 255, 255, 0.5);
   border:none;
@@ -157,12 +211,13 @@ body {
 
 .submit{
   margin-top: 5px;
-  background-color: rgba(255, 89, 0, 1);
+  background-color: #FF593D;
   // background-color: rgba(255, 255, 255, 0);
   border: none;
   color:white;
   text-transform: uppercase;
   width: 100%;
+  // margin-left: 25%;
   font-family: 'ralewayregular';
   height: 35px;
 }
@@ -175,12 +230,62 @@ body {
     margin-top: 50px;
   }
 }
-
-.designerContainer{
-  margin-top: 50px;
+.noInterest{
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 30px;
+  &:hover{
+    background-color: rgba(0 , 0, 0, 0.1)
+  }
 }
-
+#desginerHead{
+  width: 20%;
+  margin-left: 40%;
+  margin-bottom: -40px;
+  // position: fixed;
+  // width: 30%;
+  // left: 0px;
+}
+.designerContainer{
+  text-align: center;
+  margin-top: 50px;
+  // width:50%;
+  // margin-left: 25%;
+    overflow: hidden;
+  padding-bottom: 50px;
+  form{
+    p{
+      margin-bottom: 40px;
+    }
+    .bold1{
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+    .bold2{
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+}
+.whiteFilter{
+    z-index:-1000;
+    position: fixed;
+    left: 0;
+    top:0;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 100%;
+    width: 100%;
+  }
 #description{
+  opacity: 0;
+  .whiteFilter{
+    z-index:-1000;
+    position: fixed;
+    left: 0;
+    top:0;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 100%;
+    width: 100%;
+  }
   h1{
     text-align: center;
 
@@ -203,64 +308,81 @@ body {
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 100px) 
-  and (max-device-width: 736px) 
+  and (min-device-width: 14px) 
+  and (max-device-width: 1000px) 
   // and (-webkit-min-device-pixel-ratio: 3)
   // and (orientation: portrait) { 
 {   
-  body {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: url(../images/bg.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border:10px solid #FF593D;
-}
+//   body {
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     background: url(../images/bg.png) no-repeat center center fixed;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//     // border:10px solid #FF593D;
+// }
     
-    #buttons{
-      button{
-        width: 100%;
-        height: 50px;
-        margin-top: 7px;
-        font-family: 'ralewayregular';
-        font-weight: bold;
-        color: black;
-         background-color: rgba(255, 89, 0, 0);
-        text-transform: uppercase;
-        border:2px solid black;
-        &:hover{
-          background-color: rgba(0, 0, 0, 0.8);
-          color:white;
+//     #designerHead{
+//       img{
+//         display:none;
+//       }
+//     }
+//  .designerButton{
+//     width: 80%;
+//     margin-left: 10%;
+//   }
 
-        }
-      }
-    }
+//   .particulierButton{
+//      width:80%;
+//     margin-left: 10%;
+//   }
+//     .designerContainer{
+//       width:100%;
+//     }
+//     #buttons{
+//       button{
+//         width: 100%;
+//         height: 50px;
+//         margin-top: 7px;
+//         font-family: 'ralewayregular';
+//         font-weight: bold;
+//         color: black;
+//          background-color: rgba(255, 89, 0, 0);
+//         text-transform: uppercase;
+//         border:2px solid black;
+//         &:hover{
+//           background-color: rgba(0, 0, 0, 0.8);
+//           color:white;
 
-    #title{
-      width:65%;
-    }
-    #pitch{
-      font-size: 1.2em;
-    }
+//         }
+//       }
+//     }
 
-    #mainButtons{
-      button{
-        width:100% !important;
-        font-size: 1.4em;
-        height: 60px;
-      }
-      .lire{
-        margin-left: 0px;
-        margin-top: 15px;
-      }
-      .video{
-        margin-left: 0px;
-      }
+//     #title{
+//       width:40%;
+//     }
+//     #pitch{
+//       font-size: 1.4em;
+//     }
+
+//     #mainButtons{
+//       button{
+//         width:100% !important;
+//         font-size: 1.4em;
+//         height: 60px;
+//       }
+//       .lire{
+//         margin-left: 0px;
+//         margin-top: 15px;
+//       }
+//       .video{
+//         margin-left: 0px;
+//       }
       
-    }
+//     }
 }
 
 /* Landscape */
