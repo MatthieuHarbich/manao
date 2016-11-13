@@ -21,6 +21,15 @@ angular.module('manaoApp')
           var marginTop = (height/2) - (titleHeight/2) - 50;
           $('.title').css({"marginTop":marginTop});
 
+          $('input[type=email]').on('keyup',function(e){
+            if( $(this).val().length !== 0 ){
+              $("input[type=submit]").removeAttr('disabled');
+
+            }else{
+
+              $("input[type=submit]").attr('disabled','disabled');
+            }
+          })
 
           setTimeout(function(){
             $('#pitch').removeClass('hidden');
