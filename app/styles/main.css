@@ -177,17 +177,43 @@ form img {
   margin-left: 25%;
   margin-top: 50px;
 }
+.noInterest {
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 30px;
+}
+.noInterest:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 #desginerHead {
-  position: fixed;
-  width: 30%;
-  left: 0px;
+  width: 20%;
+  margin-left: 40%;
+  margin-bottom: -40px;
 }
 .designerContainer {
+  text-align: center;
   margin-top: 50px;
-  width: 50%;
-  margin-left: 25%;
   overflow: hidden;
   padding-bottom: 50px;
+}
+.designerContainer form p {
+  margin-bottom: 40px;
+}
+.designerContainer form .bold1 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.designerContainer form .bold2 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.whiteFilter {
+  z-index: -1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  width: 100%;
 }
 #description {
   opacity: 0;
