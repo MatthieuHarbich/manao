@@ -24,7 +24,7 @@
  	$scope.master = {test : "flo"};
  	$scope.update = function(form) {
  		//$scope.master = angular.copy(form);
- 		socket.emit('formToSave', $scope.master); // enregistrement dans la BD ng-click="update()"
+ 		socket.emit('formToSave', form); // enregistrement dans la BD ng-click="update()"
  	};
 
  	$scope.reset = function() {

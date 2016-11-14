@@ -28,6 +28,7 @@
 
  		});
 
+ 		socket.emit('findObjects', {test:'test'});
  		
  	});
  }

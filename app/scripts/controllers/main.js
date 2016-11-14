@@ -14,6 +14,8 @@ angular.module('manaoApp')
       'AngularJS',
       'Karma'
     ];
+
+    var socket = io.connect("http://localhost:3000");
     $scope.main = function () {
         $(document).ready(function () {
         	var height = $(window).height();
@@ -81,6 +83,18 @@ angular.module('manaoApp')
 
          
       };
+      
+       socket.on('findObjects', function(forms){
+            console.log(forms)
+        });
+      $scope.sendForm = function(formulaire){
+      
+        socket.emit('formToSave', formulaire);
+      }
+
+      $scope.console = function(form){
+        console.log(form);
+      }
 
       $scope.videoPlay = function(){
       	$("#video video").get(0).play();
@@ -131,6 +145,10 @@ angular.module('manaoApp')
         $('#video video').css('width',width);
       }
 
+     
+       
+        
+      
       $scope.go = function(path){
      		console.log(path);
      		$location.path(path);

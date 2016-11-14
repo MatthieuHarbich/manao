@@ -13,8 +13,9 @@
 
 		<p>Votre e-mail <strong>ne sera pas</strong> utilisé à des fins commerciales. Aucun <strong>SPAM</strong> ne vous sera envoyé.</p>
 
-		<input class="email" placeholder="jaime@manao-3d.ch" type="email" required>
-		<input  class="submit" type="submit" disabled>
+		<input class="email" placeholder="jaime@manao-3d.ch" type="email" ng-model="formulaire.email" required>
+		<input  class="submit" type="submit" ng-click="sendForm(formulaire)" disabled>
 	</form>
 	<button ng-click="go('/no')"class="noInterest btn btn-secondary  btn-block col-md-12">Je ne suis pas intéressé.</button>
+	<button ng-click="console(form)">test</button>
 </div>
