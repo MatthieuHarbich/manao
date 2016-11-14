@@ -36,12 +36,17 @@ angular
       })
       .when('/dform', {
         templateUrl: 'views/dform.html',
-        controller: 'DformCtrl',
+        controller: 'FormCtrl',
         controllerAs: 'dform'
       })
       .when('/pform', {
         templateUrl: 'views/pform.html',
-        controller: 'DformCtrl',
+        controller: 'FormCtrl',
+        controllerAs: 'dform'
+      })
+      .when('/no', {
+        templateUrl: 'views/no.html',
+        controller: 'noCtrl',
         controllerAs: 'dform'
       })
       .otherwise({

@@ -28,6 +28,7 @@
 
  		});
 
+
  		// la on find et on envoye sur le socket.on(getanswers) du form controller
  		// alors oui là c'est con pcq on fait ce find à chaque fois que on charge socket.js 
  		// mais je dois faire un petit truc en plus je le ferai plus tard je dois aller mangay la.
@@ -36,6 +37,7 @@
 				socket.emit('getAnswers', answers);
 				console.log(answers);
 			});
+
 
  		
  	});
