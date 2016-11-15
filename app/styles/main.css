@@ -264,5 +264,11 @@ input[type=submit]:disabled {
     margin-left: 2%;
     width: 48%;
   }
+  #title {
+    width: 40%;
+  }
+  #pitch {
+    font-size: 1.4em;
+  }
 }
 /* Landscape */
