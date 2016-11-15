@@ -35,7 +35,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow-y: hidden;
 }
 #title {
   z-index: 3000;
@@ -96,6 +95,10 @@ body {
   width: 35%;
   margin-left: 10%;
 }
+.buttons {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
 .buttons button {
   height: 40px;
   font-family: 'ralewayregular';
@@ -110,12 +113,12 @@ body {
   color: white;
 }
 .buttons .designerButton {
-  width: 35%;
-  margin-left: 10%;
+  margin-left: 5%;
+  width: 40%;
 }
 .buttons .particulierButton {
-  width: 35%;
   margin-left: 10%;
+  width: 40%;
 }
 strong {
   font-weight: 800;
