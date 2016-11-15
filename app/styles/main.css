@@ -257,9 +257,11 @@ input[type=submit]:disabled {
     background-size: cover;
   }
   .designerButton {
+    margin-left: 0;
     width: 100% !important;
   }
   .particulierButton {
+    margin-left: 0;
     width: 100% !important;
   }
   #title {
