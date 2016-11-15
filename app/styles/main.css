@@ -256,5 +256,13 @@ input[type=submit]:disabled {
     -o-background-size: cover;
     background-size: cover;
   }
+  .designerButton {
+    margin-left: 1%;
+    width: 48%;
+  }
+  .particulierButton {
+    margin-left: 2%;
+    width: 48%;
+  }
 }
 /* Landscape */
