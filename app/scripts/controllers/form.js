@@ -29,7 +29,7 @@
 
    // on ecoute sur getAnswers.
  	socket.on('getAnswers',function(answers){
- 		// console.log(answers);
+ 		console.log(answers);
  	})
 
  	$scope.reset = function() {
