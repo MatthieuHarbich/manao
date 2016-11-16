@@ -250,6 +250,23 @@ input[type=submit]:disabled {
   text-align: justify;
   font-family: 'ralewayregular';
 }
+.croquisVase {
+  width: 40%;
+  margin-left: 5%;
+  float: left;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.printedVase {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 40%;
+  margin-left: 10%;
+  float: left;
+}
+.descriptionButtons {
+  margin-bottom: 60px;
+}
 /* ----------- iPhone 6+ ----------- */
 /* Portrait and Landscape */
 /* Portrait */
@@ -258,6 +275,14 @@ input[type=submit]:disabled {
     width: 100%;
     height: 100%;
     background: none;
+  }
+  .croquisVase {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .printedVase {
+    width: 100%;
+    margin-left: 0%;
   }
   .designerButton {
     margin-left: 0% !important;
