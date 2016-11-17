@@ -44,9 +44,14 @@ angular
         controller: 'FormCtrl',
         controllerAs: 'dform'
       })
+      .when('/validation',{
+        templateUrl: 'views/validation.html',
+        controller: 'MainCtrl',
+        controllerAs: 'dform'
+      })
       .when('/no', {
         templateUrl: 'views/no.html',
-        controller: 'noCtrl',
+        controller: 'MainCtrl',
         controllerAs: 'dform'
       })
       .otherwise({

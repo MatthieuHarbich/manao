@@ -85,15 +85,14 @@ angular.module('manaoApp')
       };
       
        socket.on('findObjects', function(forms){
-            console.log(forms)
+            console.log(forms);
         });
       $scope.sendForm = function(formulaire){
-      
         socket.emit('formToSave', formulaire);
       }
 
       $scope.console = function(form){
-        console.log(form);
+        // console.log(form);
       }
 
       $scope.videoPlay = function(){
@@ -150,7 +149,6 @@ angular.module('manaoApp')
         
       
       $scope.go = function(path){
-     		console.log(path);
      		$location.path(path);
      	};
 

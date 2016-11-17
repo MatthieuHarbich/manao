@@ -24,13 +24,17 @@
  	$scope.master = {test : "flo"};
  	$scope.update = function(form) {
  		//$scope.master = angular.copy(form);
- 		socket.emit('formToSave', form); // enregistrement dans la BD ng-click="update()"
+ 		// socket.emit('formToSave', form); // enregistrement dans la BD ng-click="update()"
  	};
 
    // on ecoute sur getAnswers.
  	socket.on('getAnswers',function(answers){
  		console.log(answers);
- 	})
+ 	});
+
+ 	$scope.sendForm = function(formulaire){
+        socket.emit('formToSave', formulaire);
+      }
 
  	$scope.reset = function() {
  		$scope.form = angular.copy($scope.master);
