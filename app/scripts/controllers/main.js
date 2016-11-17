@@ -7,91 +7,91 @@
  * # MainCtrl
  * Controller of the manaoApp
  */
-angular.module('manaoApp')
-  .controller('MainCtrl', function ($scope, $location) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+ angular.module('manaoApp')
+ .controller('MainCtrl', function ($scope, $location) {
+  this.awesomeThings = [
+  'HTML5 Boilerplate',
+  'AngularJS',
+  'Karma'
+  ];
 
-    var socket = io.connect("http://localhost:3000");
-    $scope.main = function () {
-        $(document).ready(function () {
-        	var height = $(window).height();
-          var titleHeight = $('.header').height();
-          var marginTop = (height/2) - (titleHeight/2) - 50;
-          $('.title').css({"marginTop":marginTop});
+  var socket = io.connect("http://localhost:3000");
+  $scope.main = function () {
+    $(document).ready(function () {
+     var height = $(window).height();
+     var titleHeight = $('.header').height();
+     var marginTop = (height/2) - (titleHeight/2) - 50;
+     $('.title').css({"marginTop":marginTop});
 
-          $('input[type=email]').on('keyup',function(e){
-            if( $(this).val().length !== 0 ){
-              $("input[type=submit]").removeAttr('disabled');
+     $('input[type=email]').on('keyup',function(e){
+      if( $(this).val().length !== 0 ){
+        $("input[type=submit]").removeAttr('disabled');
 
-            }else{
+      }else{
 
-              $("input[type=submit]").attr('disabled','disabled');
-            }
-          })
-
-          setTimeout(function(){
-            $('#pitch').removeClass('hidden');
-            $('#pitch').animate({
-              opacity:1
-            },500)
-          },800);
-
-          setTimeout(function(){
-            $('#pitch').animate({
-              opacity:0
-            },500)
-            $('.header').animate({
-              marginTop:-marginTop+40,
-              width:"70%",
-              marginLeft:"15%"
-            },500)
-
-
-          },3000);
-
-          setTimeout(function(){
-            $('#description').removeClass('hidden');
-             $('#description').animate({
-                opacity:1
-              },500)
-          },3500);
-
-
-        	$scope.resize();
-
-        	$(window).on('resize',function(){
-        		$scope.resize();
-        	})
-        	var buttons = false;
-        	$("#video video").on("timeupdate",function(event){
-
-			      if (this.currentTime > 6 && !buttons) {
-			      	$('#buttons').removeClass('hidden');
-			      	buttons = true;
-			      };
-			      if(this.currentTime < 6 && buttons){
-			      	$('#buttons').addClass('hidden');
-			      	buttons = false;
-			      }
-			});
-			
-		});	
-
-         
-      };
-      
-       socket.on('findObjects', function(forms){
-            console.log(forms);
-        });
-      $scope.sendForm = function(formulaire){
-        socket.emit('formToSave', formulaire);
+        $("input[type=submit]").attr('disabled','disabled');
       }
+    })
 
-      $scope.console = function(form){
+     setTimeout(function(){
+      $('#pitch').removeClass('hidden');
+      $('#pitch').animate({
+        opacity:1
+      },500)
+    },800);
+
+     setTimeout(function(){
+      $('#pitch').animate({
+        opacity:0
+      },500)
+      $('.header').animate({
+        marginTop:-marginTop+40,
+        width:"70%",
+        marginLeft:"15%"
+      },500)
+
+
+    },3000);
+
+     setTimeout(function(){
+      $('#description').removeClass('hidden');
+      $('#description').animate({
+        opacity:1
+      },500)
+    },3500);
+
+
+     $scope.resize();
+
+     $(window).on('resize',function(){
+      $scope.resize();
+    })
+     var buttons = false;
+     $("#video video").on("timeupdate",function(event){
+
+       if (this.currentTime > 6 && !buttons) {
+        $('#buttons').removeClass('hidden');
+        buttons = true;
+      };
+      if(this.currentTime < 6 && buttons){
+        $('#buttons').addClass('hidden');
+        buttons = false;
+      }
+    });
+
+   });	
+
+
+  };
+
+  socket.on('findObjects', function(forms){
+    console.log(forms);
+  });
+  $scope.sendForm = function(formulaire){
+    socket.emit('formToSave', formulaire);
+  }
+
+  $scope.console = function(form){
         // console.log(form);
       }
 
@@ -144,13 +144,19 @@ angular.module('manaoApp')
         $('#video video').css('width',width);
       }
 
-     
-       
-        
+
+
+
       
       $scope.go = function(path){
-     		$location.path(path);
-     	};
+       $location.path(path);
+       console.log(path)
+       if (path == "/designer" || path == "/particulier"){
+      // socket.emit('counter', path);
+      }
 
-      $scope.main();
+
+    };
+
+    $scope.main();
   });

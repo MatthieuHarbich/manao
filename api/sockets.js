@@ -8,6 +8,8 @@
  var _ = require('lodash');
 
  var Form = require('./form/form.model');
+
+ var Counter = require('./counter/counter.model');
  
 
  module.exports = function connection(io) {
@@ -24,6 +26,29 @@
  				console.log(formaved);
 
  			})
+
+
+ 		});
+
+ 			socket.on('counter', function(counter) {
+		 			
+		 Counter.findOneAndUpdate({
+						'type': counter.path
+					})
+
+// Image.findOneAndUpdate(query, {$set:{ thumb: thumbSaved._id }}, {new: true}, function (err, fullImg) {
+//       if (err) return res.status(404).send(err);
+//       return res.status(200).send(fullImg);
+ //   })
+
+ 			// var newform = new Form();
+ 			// newform.answers = formToSave;
+ 			// newform.save(function(err, formaved) {
+ 			// 	if (err) return handleError(err);
+ 			// 	console.log("Form saved!!");
+ 			// 	console.log(formaved);
+
+ 			// })
 
 
  		});
