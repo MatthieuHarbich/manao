@@ -87,9 +87,17 @@
   socket.on('findObjects', function(forms){
     console.log(forms);
   });
-  $scope.sendForm = function(formulaire){
-    socket.emit('formToSave', formulaire);
+  $scope.sendForm = function(mail,type){
+    mail.type = type;
+    socket.emit('mailToSave', mail);
   }
+
+  $scope.sendFormD = function(form,type){
+    console.log(form)
+    form.type = type
+    socket.emit('formToSave',form);
+  }
+
 
   $scope.console = function(form){
         // console.log(form);
@@ -152,8 +160,14 @@
        $location.path(path);
        console.log(path)
        if (path == "/designer" || path == "/particulier"){
-      // socket.emit('counter', path);
+        var counter = {};
+
+        var pathS = path.split("/");
+
+        socket.emit('counter',pathS);
       }
+
+
 
 
     };

@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
 
 var MailSchema = new Schema({
 	type: String,
-	mail: [String]
+	mails: [String]
 });
 
 module.exports = mongoose.model('Mail', MailSchema);
