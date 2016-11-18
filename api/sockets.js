@@ -87,7 +87,7 @@
 
 
  		socket.on('mailToSave', function(mail) {
-
+ 			console.log("hooh")
  		Mail.findOneAndUpdate({ type : mail.type}, {$push: {mails: mail.email}}, {new: true}, function (err, counter) {
  			
  			})
