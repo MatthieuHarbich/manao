@@ -12,6 +12,8 @@
  var Counter = require('./counter/counter.model');
 
  var Mail = require('./mail/mail.model');
+
+ var Comment = require('./comment/comment.model');
  // init counter
 
  Counter.find(function(err,counters) {
@@ -59,19 +61,14 @@
 
  			})
 
-
-
  		}
  	});
 
  module.exports = function connection(io) {
  	io.sockets.on('connection', function(socket) {
 
-
  		socket.on('formToSave', function(formToSave) {
- 			console.log("formToSave");
- 			console.log(formToSave);
- 			var newform = new Form();
+  			var newform = new Form();
  			newform.type = formToSave.type;
  			delete newform.type;
  			newform.answers = formToSave;
@@ -79,19 +76,23 @@
  				if (err)  console.log(err)
  				console.log("Form saved!!");
  				console.log(formaved);
-
  			})
-
-
  		});
 
+ 		socket.on('commentToSave', function(commentToSave) {
+ 			console.log(commentToSave);
+ 			var newcomment = new Comment();
+ 			newcomment.commentaire = commentToSave.commentsNo;
+ 			newcomment.save(function(err, commensaved) {
+ 				if (err)  console.log(err)
+ 				console.log("comment saved!!");
+ 			})
+ 		});
 
  		socket.on('mailToSave', function(mail) {
- 			console.log("hooh")
  		Mail.findOneAndUpdate({ type : mail.type}, {$push: {mails: mail.email}}, {new: true}, function (err, counter) {
  			
  			})
-
 
  		});
 

@@ -15,7 +15,8 @@
   'Karma'
   ];
 
-  var socket = io.connect("http://localhost:3000");
+  //var socket = io.connect("http://localhost:3000");
+  var socket = io.connect(window.location.hostname);
   $scope.main = function () {
     $(document).ready(function () {
      var height = $(window).height();
@@ -84,9 +85,9 @@
 
   };
 
-  socket.on('findObjects', function(forms){
-    console.log(forms);
-  });
+  // socket.on('findObjects', function(forms){
+  //   console.log(forms);
+  // });
   $scope.sendForm = function(mail,type){
     mail.type = type;
     socket.emit('mailToSave', mail);
@@ -96,6 +97,10 @@
     console.log(form)
     form.type = type
     socket.emit('formToSave',form);
+  }
+
+   $scope.sendComment = function(comment){
+    socket.emit('commentToSave',comment);
   }
 
 

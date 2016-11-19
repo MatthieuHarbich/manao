@@ -31,7 +31,7 @@ var server = app.listen(port);
 var io = require('socket.io').listen(server);
 var routeSocket = require('./api/sockets')(io);
 io.sockets.on('connection', function (socket) {
-    console.log('Un client est connecté, vive le Socket Matttthieu !');
+   // console.log('Un client est connecté, vive le Socket Matttthieu !');
 });
 
 app.use(express.static(__dirname + '/app'));
