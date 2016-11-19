@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
 
 var CounterSchema = new Schema({
 	type: String,
-	counter: Number
+	counter: { type: Number, default: 0 },
 });
 
 module.exports = mongoose.model('Counter', CounterSchema);

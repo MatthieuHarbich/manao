@@ -36,12 +36,12 @@ angular
       })
       .when('/dform', {
         templateUrl: 'views/dform.html',
-        controller: 'FormCtrl',
+        controller: 'MainCtrl',
         controllerAs: 'dform'
       })
       .when('/pform', {
         templateUrl: 'views/pform.html',
-        controller: 'FormCtrl',
+        controller: 'MainCtrl',
         controllerAs: 'dform'
       })
       .when('/validation',{
