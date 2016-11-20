@@ -6,11 +6,11 @@
 		<h2>Super! Nous te tiendrons informé</h2>
 		<h4>Te reste-il quelques secondes?</h4>
 		<img src="images/modele3d.jpg" alt="">
-		<p style="margin-top:20px;">Si cet abat-jour était TON idée. Serais-tu prêt(e) à le faire modéliser, imprimer et livrer pour 350.-? (~300 euros)</p>
+		<p style="margin-top:20px;">Cet abat-jour est TON idée. Es-tu prêt(e) à le faire modéliser, imprimer et livrer pour 350.-? (~300 euros)</p>
 		Oui <input style="margin-right:15px;" type="radio" ng-model="form.yes" name="accept" value="oui"> 
 		Non <input type="radio" ng-model="form.no" name="accept" value="non">
 		
-		<p ng-show="no" style="margin-top:15px;">Quel serait le montant maximum que tu serais prêt(e) à mettre?</p>
+		<p ng-show="form.no" style="margin-top:15px;">Quel est le montant maximum que tu es prêt(e) à mettre?</p>
 		<input ng-show="form.no" ng-model="form.price" type="number" max="350" value="349" >
 		<p style="margin-top:15px;">Ton avis nous est précieux. Fais tout commentaire, positif ou négatif, qui te semble constructif pour nous.</p>
 		<p style="margin-top:10px;">C'est bien-sûr <strong>anonyme</strong>.</p>
