@@ -21,20 +21,49 @@
  		if (!counters.length) {
 
  			var newcounter = new Counter();
- 			newcounter.type = "designer"
+ 			newcounter.type = "designer";
+ 			newcounter.name = "Nb clicks designer";
  			newcounter.save(function(err, countersaved) {
  				if (err) console.log("error create counter");
  				console.log("Counter saved!!");
 
- 			})
+ 			});
 
  			var newcounter2 = new Counter();
- 			newcounter2.type = "particulier"
+ 			newcounter2.type = "particulier";
+ 			newcounter2.name = "Nb clicks particulier";
  			newcounter2.save(function(err, countersaved) {
  				if (err) console.log("error create counter");
  				console.log("Counter saved!!");
 
- 			})
+ 			});
+
+ 			var visitor = new Counter();
+ 			visitor.type = "visitor";
+ 			visitor.name = "Nombre de visteur sur la page principale"
+ 			visitor.save(function(err, visrosaved) {
+ 				if (err) console.log("error create counter");
+ 				console.log("Counter saved!!");
+
+ 			});
+
+ 			var designerNo = new Counter();
+ 			designerNo.type = "designerNo",
+ 			designerNo.name =  "Designer : Nombre de click sur je ne suis pas int.." 
+ 			designerNo.save(function(err, visrosaved) {
+ 				if (err) console.log("error create counter");
+ 				console.log("Counter saved!!");
+
+ 			});
+
+ 			var partiNo = new Counter();
+ 			partiNo.type = "particulierNo"
+ 			partiNo.name =  "Particulier : Nombre de click sur je ne suis pas int.."
+ 			partiNo.save(function(err, visrosaved) {
+ 				if (err) console.log("error create counter");
+ 				console.log("Counter saved!!");
+
+ 			});
 
 
  		}
@@ -68,13 +97,13 @@
  	io.sockets.on('connection', function(socket) {
 
  		socket.on('formToSave', function(formToSave) {
-  			var newform = new Form();
+ 			var newform = new Form();
  			newform.type = formToSave.type;
  			delete newform.type;
  			newform.answers = formToSave;
  			newform.save(function(err, formaved) {
  				if (err)  console.log(err)
- 				console.log("Form saved!!");
+ 					console.log("Form saved!!");
  				console.log(formaved);
  			})
  		});
@@ -85,13 +114,13 @@
  			newcomment.commentaire = commentToSave.commentsNo;
  			newcomment.save(function(err, commensaved) {
  				if (err)  console.log(err)
- 				console.log("comment saved!!");
+ 					console.log("comment saved!!");
  			})
  		});
 
  		socket.on('mailToSave', function(mail) {
- 		Mail.findOneAndUpdate({ type : mail.type}, {$push: {mails: mail.email}}, {new: true}, function (err, counter) {
- 			
+ 			Mail.findOneAndUpdate({ type : mail.type}, {$push: {mails: mail.email}}, {new: true}, function (err, counter) {
+
  			})
 
  		});
@@ -99,7 +128,21 @@
  		socket.on('counter', function(path) {
  			
  			Counter.findOneAndUpdate({ type : path[1]}, {$inc: { counter: 1 }}, {new: true}, function (err, counter) {
- 			 			})
+ 			})
+
+ 		});
+
+ 		// socket.on('visitor', function(params) {
+ 		// 	console.log("+1 visitor");
+ 		// 	Counter.findOneAndUpdate({ type : 'visitor'}, {$inc: { counter: 1 }}, {new: true}, function (err, counter) {
+ 		// 	})
+
+ 		// });
+
+ 			socket.on('noInterest', function(type) {
+ 			console.log("+1 No interst");
+ 			Counter.findOneAndUpdate({ type : type}, {$inc: { counter: 1 }}, {new: true}, function (err, counter) {
+ 			})
 
  		});
 

@@ -24,9 +24,9 @@
      var marginTop = (height/2) - (titleHeight/2) - 50;
      $('.title').css({"marginTop":marginTop});
      $('.txtbutton').on('click',function(){
-        $('.txt').removeClass('hidden');
-        $(this).addClass('hidden');
-     });
+      $('.txt').removeClass('hidden');
+      $(this).addClass('hidden');
+    });
      $('input[type=email]').on('keyup',function(e){
       if( $(this).val().length !== 0 ){
         $("input[type=submit]").removeAttr('disabled');
@@ -44,7 +44,8 @@
       },500)
     },800);
 
-     setTimeout(function(){
+     setTimeout(function(){      
+        
       $('#pitch').animate({
         opacity:0
       },500)
@@ -91,6 +92,17 @@
   // socket.on('findObjects', function(forms){
   //   console.log(forms);
   // });
+
+  $scope.sendFormD = function(type){
+    socket.emit('noInterest',type);
+
+  }
+
+  $scope.visitor = function(){
+    console.log("jme coo");
+    socket.emit('visitor');
+  }
+
   $scope.sendForm = function(mail,type){
     mail.type = type;
     socket.emit('mailToSave', mail);
@@ -102,7 +114,7 @@
     socket.emit('formToSave',form);
   }
 
-   $scope.sendComment = function(comment){
+  $scope.sendComment = function(comment){
     socket.emit('commentToSave',comment);
   }
 

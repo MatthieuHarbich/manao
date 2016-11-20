@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
 
 var CounterSchema = new Schema({
 	type: String,
+	name : String,
 	counter: { type: Number, default: 0 },
 });
 

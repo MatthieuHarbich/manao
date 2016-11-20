@@ -9,14 +9,14 @@
 	<form action="" ng-submit="go('/dform'); sendForm(formulaire,'designer')">
 <!-- 		<p>Est-ce que cette plateforme est susceptible de t'intéresser?</p>
 		<img src="images/modele3d.jpg" alt=""> -->
-		<p><span class="bold1">manao</span> vous offre <strong>4 mois</strong> d'exclusivité sur votre <span class="bold2">portfolio</span> de modèles à sa sortie. <br> Laisse-nous ton e-mail pour en bénéficier!</p>
+		<p><span class="bold1">manao</span> vous offre <span class="bold1">4 mois</span> d'exclusivité sur votre <span class="bold2">portfolio</span> de modèles à sa sortie. <br> Laisse-nous ton e-mail pour en bénéficier!</p>
 		
 		<p>L'exclusivité permettra à ton portfolio d'être mis en avant. Un système similaire au Google Ad-words.</p>
-		<p>Ton e-mail <strong>ne sera pas</strong> utilisé à des fins commerciales. Aucun <strong>SPAM</strong> ne te sera envoyé!</p>
+		<p>Ton e-mail <span class="bold1">ne sera pas</span> utilisé à des fins commerciales. Aucun <span class="bold1">SPAM</span> ne te sera envoyé!</p>
 
 		<input class="email" placeholder="jaime@manao-3d.ch" type="email" ng-model="formulaire.email" required>
 		<input  class="submit" type="submit" ng-click="" disabled>
 	</form>
-	<button ng-click="go('/no')"class="noInterest btn btn-secondary  btn-block col-md-12">Je ne suis pas intéressé(e).</button>
+	<button ng-click="go('/no'); noInterest('designer')" class="noInterest btn btn-secondary  btn-block col-md-12">Je ne suis pas intéressé(e).</button>
 	<!-- <button ng-click="console(form)">test</button> -->
 </div>
