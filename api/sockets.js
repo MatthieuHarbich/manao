@@ -139,7 +139,7 @@
 
  		// });
 
- 			socket.on('noInterest', function(type) {
+ 			socket.on('noInterestbd', function(type) {
  			console.log("+1 No interst");
  			Counter.findOneAndUpdate({ type : type}, {$inc: { counter: 1 }}, {new: true}, function (err, counter) {
  			})
