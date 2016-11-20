@@ -93,7 +93,7 @@
   //   console.log(forms);
   // });
 
-  $scope.sendFormD = function(type){
+  $scope.noInterest = function(type){
     socket.emit('noInterest',type);
 
   }
