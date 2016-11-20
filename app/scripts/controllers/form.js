@@ -16,8 +16,8 @@
  	//** socket **//
 
  	console.log("hostname : " + window.location.hostname);
-	//var socket = io.connect(window.location.hostname);
-	var socket = io.connect("http://localhost:3000");
+	var socket = io.connect(window.location.hostname);
+	//var socket = io.connect("http://localhost:3000");
 
 
  	//** form **//

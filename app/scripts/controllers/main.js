@@ -15,8 +15,8 @@
   'Karma'
   ];
 
-  //var socket = io.connect("http://localhost:3000");
-  var socket = io.connect(window.location.hostname);
+  var socket = io.connect("http://localhost:3000");
+  //var socket = io.connect(window.location.hostname);
   $scope.main = function () {
     $(document).ready(function () {
      var height = $(window).height();
