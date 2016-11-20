@@ -20,11 +20,15 @@ angular
         controllerAs: 'main'
       })
       .when('/designer', {
-        templateUrl: 'views/designer.html'
+        templateUrl: 'views/designer.html',
+         controller: 'MainCtrl',
+        controllerAs: 'main'
       })
       .when('/particulier', {
         templateUrl: 'views/particulier.html',
+         controller: 'MainCtrl',
         controllerAs: 'main'
+
       })
       .when('/form', {
         templateUrl: 'views/form.html',

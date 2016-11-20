@@ -45,7 +45,6 @@
     },800);
 
      setTimeout(function(){      
-        
       $('#pitch').animate({
         opacity:0
       },500)
@@ -54,7 +53,6 @@
         width:"70%",
         marginLeft:"15%"
       },500)
-
 
     },3000);
 
@@ -93,13 +91,13 @@
   //   console.log(forms);
   // });
 
-  $scope.noInterest = function(type){
-    socket.emit('noInterest',type);
+  $scope.noInterestbd = function(type){
+    socket.emit('noInterestbd',type);
 
   }
 
   $scope.visitor = function(){
-    console.log("jme coo");
+
     socket.emit('visitor');
   }
 
